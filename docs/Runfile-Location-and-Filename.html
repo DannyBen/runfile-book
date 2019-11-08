@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Runfile Location and Filename - Runfile Documentation</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class=""><a href="index.html"><strong aria-hidden="true">1.</strong> Home</a></li><li class=""><a href="Introduction.html"><strong aria-hidden="true">2.</strong> Introduction</a></li><li class=""><a href="Runfile-Command-Reference/index.html"><strong aria-hidden="true">3.</strong> Runfile Command Reference</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class=""><a href="Runfile-Command-Reference/Defining-Program-Details.html"><strong aria-hidden="true">3.1.</strong> Defining Program Details</a></li><li class=""><a href="Runfile-Command-Reference/Defining-Program-Actions.html"><strong aria-hidden="true">3.2.</strong> Defining Program Actions</a></li><li class=""><a href="Runfile-Command-Reference/Output-Commands.html"><strong aria-hidden="true">3.3.</strong> Output Commands</a></li><li class=""><a href="Runfile-Command-Reference/Execution-Commands.html"><strong aria-hidden="true">3.4.</strong> Execution Commands</a></li><li class=""><a href="Runfile-Command-Reference/Misc-Commands.html"><strong aria-hidden="true">3.5.</strong> Misc Commands</a></li></ol></li><li class="expanded "><a href="Runfile-Location-and-Filename.html" class="active"><strong aria-hidden="true">4.</strong> Runfile Location and Filename</a></li><li class=""><a href="Creating-Reusable-Tasks.html"><strong aria-hidden="true">5.</strong> Creating Reusable Tasks</a></li><li class=""><a href="Multiple-Project-Runfiles.html"><strong aria-hidden="true">6.</strong> Multiple Project Runfiles</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Runfile Documentation</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                            <a href="https://github.com/dannyben/runfile" title="Git repository" aria-label="Git repository">
+                                <i id="git-repository-button" class="fa fa-github"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#runfile-location-and-filename" id="runfile-location-and-filename">Runfile Location and Filename</a></h1>
+<p>Runfile is designed to help you create both project specific command
+line tools, and system wide command line applications.</p>
+<p><strong>Project Runfiles</strong> are simply named <strong>Runfile</strong> and can only be 
+accessed in the same directory they live in.</p>
+<p><strong>Named Runfiles (*.runfile)</strong> can exist in several places:</p>
+<ul>
+<li><code>*.runfile</code> in the current folder</li>
+<li><code>*.runfile</code> in <code>~/runfile</code> and its sub directories</li>
+<li><code>*.runfile</code> in <code>/etc/runfile</code> and its sub directories</li>
+<li><code>*.runfile</code> in any custom folder</li>
+</ul>
+<p>When you execute <code>run</code>, this is what happens:</p>
+<ul>
+<li>If there is a file called <strong>Runfile</strong> in the current directory, 
+we will use it.</li>
+<li>If there is a file called <strong>.runfile</strong> in the current folder, we will
+use it as a configuration file to tell us where the runfiles are. 
+(See <a href="#custom-location-for-named-runfiles">Custom Location</a> below).</li>
+<li>If not, search for <strong>*.runfiles</strong> in the runfile search directories and 
+subdirectories.</li>
+<li>If one or more were found, show a list of all of them.</li>
+</ul>
+<h2><a class="header" href="#using-a-project-runfile" id="using-a-project-runfile">Using a project Runfile</a></h2>
+<pre><code>$ cd /your/project
+
+$ run new
+Runfile created.
+
+$ run
+Usage:
+  run command &lt;arg&gt; [--flag]
+  run (-h|--help|--version)
+
+$ run command hello
+Command running...
+
+$ cat Runfile
+summary &quot;Application description&quot;
+version &quot;0.1.0&quot;
+
+usage  &quot;command &lt;arg&gt; [--flag]&quot;
+help   &quot;Help line for command&quot;
+option &quot;-f --flag&quot;, &quot;Help text for option&quot;
+action :command do |args|
+  say &quot;Command running...&quot;
+end
+</code></pre>
+<h2><a class="header" href="#using-named-runfiles" id="using-named-runfiles">Using Named Runfiles</a></h2>
+<pre><code>$ cd /your/project
+
+$ run new greet
+greet.runfile created.
+
+$ run
+Runfile engine v0.7.0
+
+Tip: Type 'run new' or 'run new name' to create a runfile.
+For global access, place named.runfiles in ~/runfile/ or in /etc/runfile/ or 
+anywhere in the PATH.
+
+  run greet ........................ /path/to/file
+
+$ run greet
+Usage:
+  run greet command &lt;arg&gt; [--flag]
+  run greet (-h|--help|--version)
+
+$ cd ~/runfile    # or /etc/runfile
+
+$ run new hotdog
+hotdog.runfile created.
+
+$ run
+Runfile engine v0.4.0
+
+Tip: Type 'run new' or 'run new name' to create a runfile.
+For global access, place named.runfiles in ~/runfile/ or in /etc/runfile/ or 
+anywhere in the PATH.
+
+  run greet ........................ /path/to/file
+  run hotdog ....................... /path/to/file
+</code></pre>
+<h2><a class="header" href="#custom-location-for-named-runfiles" id="custom-location-for-named-runfiles">Custom Location for Named Runfiles</a></h2>
+<p>For more advanced uses, you can define multiple Runfiles per project.</p>
+<p>This can be handy if you have a large set of commands and wish to 
+separate them to multiple files.</p>
+<p>Simply create a <code>.runfile</code> settings file in your project, and use it
+to specify the location of the folder containing your runfiles.</p>
+<pre><code class="language-yaml"># in .runfile
+---
+folder: lib/commands
+</code></pre>
+<p>This settings file supports several more options, like auto-loading a
+helper file, and creating command shortcuts.</p>
+<p>Read more in the <a href="https://github.com/DannyBen/runfile/wiki/Multiple-Project-Runfiles">Multiple Project Runfiles</a> page, or see the 
+<a href="https://github.com/DannyBen/runfile/tree/master/examples/s_settings">Settings Example</a></p>
+<h2><a class="header" href="#ignoring-the-local-runfile" id="ignoring-the-local-runfile">Ignoring the local Runfile</a></h2>
+<p>In case you are using both local Runfiles and global named runfiles, you may find
+yourself in a situation where you are trying to run a named runfile from a 
+folder that contains a local Runfile.</p>
+<p>The local Runfile will take precedence and not allow access to your global 
+runfiles. </p>
+<p>To overcome this issue, <strong>use <code>run!</code> instead of <code>run</code></strong>.</p>
+<p>The <code>run!</code> command will ignore the local Runfile and only look for 
+named runfiles.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="Runfile-Command-Reference/Misc-Commands.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="Creating-Reusable-Tasks.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="Runfile-Command-Reference/Misc-Commands.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="Creating-Reusable-Tasks.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
