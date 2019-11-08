@@ -3,7 +3,7 @@ Runfile Documentation
 
 This is the documentation site for [Runfile](https://github.com/dannyben/runfile).
 
-The documentation is generated to [runfile.dannyb.co](https://runfile.dannyb.co)
+The documentation is generated to [runfile.dannyb.co](https://runfile.dannyb.co).
 
 
 Development
