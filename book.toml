@@ -10,9 +10,8 @@ build-dir = "docs"
 create-missing = false
 
 [output.html]
-default-theme = "ayu"
 git-repository-url = "https://github.com/dannyben/runfile"
-DISABLED-google-analytics = "UA-6696444-13"
+
 
 [output.html.fold]
 enable = true
