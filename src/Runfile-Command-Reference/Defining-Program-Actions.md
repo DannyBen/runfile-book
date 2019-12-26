@@ -24,7 +24,7 @@ action :anything do
   # ...
 end
 
-encdommand
+endcommand
 ```
 
 ## Reference
