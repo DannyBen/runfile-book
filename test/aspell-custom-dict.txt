@@ -51,3 +51,6 @@ txtgrn
 txtred
 txtrst
 yaml
+filename
+Filename
+Filenames
