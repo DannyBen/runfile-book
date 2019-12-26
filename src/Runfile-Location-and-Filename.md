@@ -21,7 +21,7 @@ When you execute `run`, this is what happens:
   use it as a configuration file to tell us where the runfiles are. 
   (See [Custom Location](#custom-location-for-named-runfiles) below).
 - If not, search for __*.runfiles__ in the runfile search directories and 
-  subdirectories.
+  sub-directories.
 - If one or more were found, show a list of all of them.
 
 

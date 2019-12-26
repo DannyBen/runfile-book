@@ -28,7 +28,7 @@ __Example:__ `summary "My new application"`
 
 ### version *string*
 
-Specify a verion string for your program.  
+Specify a version string for your program.  
 This command is optional.
 
 __Example:__ `version "0.1.0"`
