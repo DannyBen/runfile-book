@@ -128,6 +128,21 @@ To overcome this issue, **use `run!` instead of `run`**.
 The `run!` command will ignore the local Runfile and only look for 
 named runfiles.
 
+### Note for RVM users
+
+If you are using RVM, it is recommended you add this to your `.bashrc`:
+
+```shell
+export NOEXEC_EXCLUDE="run!"
+```
+
+This will prevent RVM from silently prepending it with `bundle exec`.
+
+More information is available in the [RVM documentation][3]
+and in the [RVM GitHub Repository][4].
+
 
 [1]: https://github.com/DannyBen/runfile/wiki/Multiple-Project-Runfiles
 [2]: https://github.com/DannyBen/runfile/tree/master/examples/s_settings
+[3]: https://rvm.io/integration/bundler
+[4]: https://github.com/rvm/rubygems-bundler

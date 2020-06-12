@@ -1,6 +1,7 @@
 personal_ws-1.1 en 22 
 arg
 args
+bashrc
 bg
 cd
 Cheatsheet
@@ -16,6 +17,9 @@ DSL
 eg
 endcommand
 env
+filename
+Filename
+Filenames
 flagname
 gsub
 hotdog
@@ -27,10 +31,12 @@ MyCommonTasks
 myserver
 namespace
 Namespace
+NOEXEC
 param
 pid
 PID
 Premade
+prepending
 pwd
 Rakefile
 rb
@@ -42,6 +48,7 @@ Runfile
 runfile
 Runfiles
 runfiles
+RVM
 sd
 svg
 tmp
@@ -51,6 +58,3 @@ txtgrn
 txtred
 txtrst
 yaml
-filename
-Filename
-Filenames
