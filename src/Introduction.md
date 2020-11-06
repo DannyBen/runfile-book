@@ -36,7 +36,7 @@ Usage:
   run (-h|--help|--version)
 ```
 Take a look at the [examples][eg], or the 
-[Runfile Command Reference](Runfile-Command-Reference)
+[Runfile Command Reference](Runfile-Command-Reference/)
 
 
 If you are familiar with Rake...
@@ -114,7 +114,7 @@ Options:
 
 Familiar right? Good. Familiar is good.
 
-See the full [Runfile Command Reference](Runfile-Command-Reference) 
+See the full [Runfile Command Reference](Runfile-Command-Reference/) 
 (it is short and not at all scary) or learn more about [Runfile 
 Locations and Filenames](Runfile-Location-and-Filename.md).
 

@@ -171,4 +171,4 @@ idea of what is possible with this extension.
 
 
 [example file]: https://github.com/DannyBen/runfile/blob/master/examples/r_exec/Runfile
-[feature file]: https://github.com/DannyBen/runfile/blob/master/features/n_exec.feature
+[feature file]: https://github.com/DannyBen/runfile/blob/master/features/exec.feature

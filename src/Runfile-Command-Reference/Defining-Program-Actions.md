@@ -122,7 +122,7 @@ Normally, the help message for all environment variables appears under the
 `Environment Variables:` caption. If you provide the third `<label>`
 argument, it will appear under a different caption.
 
-> <i class='fa fa-arrow-right'></i> **See Also**: [Environment Variables Example](https://github.com/DannyBen/runfile/blob/master/examples/u_env_vars/Runfile)
+> <i class='fa fa-arrow-right'></i> **See Also**: [Environment Variables Example](https://github.com/DannyBen/runfile/blob/master/examples/w_env_vars/Runfile)
 
 This command is optional.
 

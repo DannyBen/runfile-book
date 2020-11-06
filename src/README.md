@@ -8,7 +8,7 @@
 
 What is Runfile and how to use it.
 
-### [Runfile Command Reference](Runfile-Command-Reference)
+### [Runfile Command Reference](Runfile-Command-Reference/)
 
 An extensive description explaining how to construct your Runfile.  
 Jump directly to: 
