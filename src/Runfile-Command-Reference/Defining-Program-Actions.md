@@ -9,6 +9,7 @@ usage   "server PORT [--background]"
 help    "Start the server, optionally in the background"
 option  "-b --background", "Start in the background"
 param   "PORT", "Server port to listen on"
+env_var "HOST", "Host address to listen to"
 example "server 3000 -b"
 action  :server do |args|
   # ... action code here
@@ -108,6 +109,28 @@ __Examples:__
 ```
 param "PORT", "Server port to listen to"
 param "SOURCE", "File to copy", "Copy Options"
+```
+
+
+### env_var *string*, *description* [, *label*]
+
+Specify the help information for any environment variables your Runfile may
+need. This is purely decorative and has no impact on the operation of the
+Runfile.
+
+Normally, the help message for all environment variables appears under the
+`Environment Variables:` caption. If you provide the third `<label>`
+argument, it will appear under a different caption.
+
+> <i class='fa fa-arrow-right'></i> **See Also**: [Environment Variables Example](https://github.com/DannyBen/runfile/blob/master/examples/u_env_vars/Runfile)
+
+This command is optional.
+
+__Examples:__
+
+```
+env_var "HOST", "Host address to listen on"
+env_var "USER", "SSH user", "SSH Environment Variables"
 ```
 
 
