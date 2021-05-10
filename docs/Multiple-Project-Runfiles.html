@@ -140,13 +140,19 @@
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
+                        
+                        <a href="https://github.com/DannyBen/runfile-book/edit/master/src/Multiple-Project-Runfiles.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                        
+
                     </div>
                 </div>
 
                 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -167,7 +173,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#multiple-project-runfiles" id="multiple-project-runfiles">Multiple Project Runfiles</a></h1>
+                        <h1 id="multiple-project-runfiles"><a class="header" href="#multiple-project-runfiles">Multiple Project Runfiles</a></h1>
 <p>Runfile provides another mechanism for more advanced uses.</p>
 <p>This mechanism lets you have multiple named runfiles per project. This is
 useful when your Runfile becomes too large, or when you wish to separate
@@ -177,7 +183,7 @@ it to logical units.</p>
 <li>Delete the <code>Runfile</code> file from your project's folder.</li>
 <li>Create a <code>.runfile</code> settings file (YAML) in your project's folder.</li>
 </ul>
-<h2><a class="header" href="#the-runfile-configuration-file" id="the-runfile-configuration-file">The .runfile Configuration File</a></h2>
+<h2 id="the-runfile-configuration-file"><a class="header" href="#the-runfile-configuration-file">The .runfile Configuration File</a></h2>
 <pre><code class="language-yaml"># .runfile
 # Runfile settings YAML 
 

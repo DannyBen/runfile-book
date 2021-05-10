@@ -140,13 +140,19 @@
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
+                        
+                        <a href="https://github.com/DannyBen/runfile-book/edit/master/src/Runfile-Location-and-Filename.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                        
+
                     </div>
                 </div>
 
                 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -167,7 +173,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#runfile-location-and-filename" id="runfile-location-and-filename">Runfile Location and Filename</a></h1>
+                        <h1 id="runfile-location-and-filename"><a class="header" href="#runfile-location-and-filename">Runfile Location and Filename</a></h1>
 <p>Runfile is designed to help you create both project specific command
 line tools, and system wide command line applications.</p>
 <p><strong>Project Runfiles</strong> are simply named <strong>Runfile</strong> and can only be 
@@ -190,7 +196,7 @@ use it as a configuration file to tell us where the runfiles are.
 sub-directories.</li>
 <li>If one or more were found, show a list of all of them.</li>
 </ul>
-<h2><a class="header" href="#using-a-project-runfile" id="using-a-project-runfile">Using a project Runfile</a></h2>
+<h2 id="using-a-project-runfile"><a class="header" href="#using-a-project-runfile">Using a project Runfile</a></h2>
 <pre><code>$ cd /your/project
 
 $ run new
@@ -215,7 +221,7 @@ action :command do |args|
   say &quot;Command running...&quot;
 end
 </code></pre>
-<h2><a class="header" href="#using-named-runfiles" id="using-named-runfiles">Using Named Runfiles</a></h2>
+<h2 id="using-named-runfiles"><a class="header" href="#using-named-runfiles">Using Named Runfiles</a></h2>
 <pre><code>$ cd /your/project
 
 $ run new greet
@@ -250,7 +256,7 @@ anywhere in the PATH.
   run greet ........................ /path/to/file
   run hotdog ....................... /path/to/file
 </code></pre>
-<h2><a class="header" href="#custom-location-for-named-runfiles" id="custom-location-for-named-runfiles">Custom Location for Named Runfiles</a></h2>
+<h2 id="custom-location-for-named-runfiles"><a class="header" href="#custom-location-for-named-runfiles">Custom Location for Named Runfiles</a></h2>
 <p>For more advanced uses, you can define multiple Runfiles per project.</p>
 <p>This can be handy if you have a large set of commands and wish to 
 separate them to multiple files.</p>
@@ -264,7 +270,7 @@ folder: lib/commands
 helper file, and creating command shortcuts.</p>
 <p>Read more in the <a href="https://github.com/DannyBen/runfile/wiki/Multiple-Project-Runfiles">Multiple Project Runfiles</a> page, or see the 
 <a href="https://github.com/DannyBen/runfile/tree/master/examples/s_settings">Settings Example</a></p>
-<h2><a class="header" href="#ignoring-the-local-runfile" id="ignoring-the-local-runfile">Ignoring the local Runfile</a></h2>
+<h2 id="ignoring-the-local-runfile"><a class="header" href="#ignoring-the-local-runfile">Ignoring the local Runfile</a></h2>
 <p>In case you are using both local Runfiles and global named runfiles, you may find
 yourself in a situation where you are trying to run a named runfile from a 
 folder that contains a local Runfile.</p>
@@ -273,7 +279,7 @@ runfiles. </p>
 <p>To overcome this issue, <strong>use <code>run!</code> instead of <code>run</code></strong>.</p>
 <p>The <code>run!</code> command will ignore the local Runfile and only look for 
 named runfiles.</p>
-<h3><a class="header" href="#note-for-rvm-users" id="note-for-rvm-users">Note for RVM users</a></h3>
+<h3 id="note-for-rvm-users"><a class="header" href="#note-for-rvm-users">Note for RVM users</a></h3>
 <p>If you are using RVM, it is recommended you add this to your <code>.bashrc</code>:</p>
 <pre><code class="language-shell">export NOEXEC_EXCLUDE=&quot;run!&quot;
 </code></pre>

@@ -12,6 +12,7 @@ create-missing = false
 [output.html]
 git-repository-url = "https://github.com/dannyben/runfile"
 google-analytics = "UA-6696444-17"
+edit-url-template = "https://github.com/DannyBen/runfile-book/edit/master/{path}"
 
 [output.html.fold]
 enable = true

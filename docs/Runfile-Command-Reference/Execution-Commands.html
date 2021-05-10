@@ -140,13 +140,19 @@
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
+                        
+                        <a href="https://github.com/DannyBen/runfile-book/edit/master/src/Runfile-Command-Reference/Execution-Commands.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                        
+
                     </div>
                 </div>
 
                 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -167,8 +173,8 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#execution-commands" id="execution-commands">Execution Commands</a></h1>
-<h2><a class="header" href="#cheatsheet" id="cheatsheet">Cheatsheet</a></h2>
+                        <h1 id="execution-commands"><a class="header" href="#execution-commands">Execution Commands</a></h1>
+<h2 id="cheatsheet"><a class="header" href="#cheatsheet">Cheatsheet</a></h2>
 <pre><code class="language-ruby">
 # --- Running commands and services
 
@@ -200,22 +206,22 @@ end
 Runfile.pid_dir = 'tmp'
 
 </code></pre>
-<h2><a class="header" href="#reference" id="reference">Reference</a></h2>
-<h3><a class="header" href="#run-string" id="run-string">run <em>string</em></a></h3>
+<h2 id="reference"><a class="header" href="#reference">Reference</a></h2>
+<h3 id="run-string"><a class="header" href="#run-string">run <em>string</em></a></h3>
 <p>Print and run a command. Wait until it is done and continue.
 This is executed using <code>system</code>. If <code>Runfile.quiet</code> is true, it will
 not echo the command to the console.</p>
 <p><strong>Example:</strong></p>
 <pre><code class="language-ruby">run &quot;rails server -b* -p3000&quot;
 </code></pre>
-<h3><a class="header" href="#run-string-1" id="run-string-1">run! <em>string</em></a></h3>
+<h3 id="run-string-1"><a class="header" href="#run-string-1">run! <em>string</em></a></h3>
 <p>Print and run a command, then exit. This is executed using <code>exec</code>.
 If <code>Runfile.quiet</code> is true, it will not echo the command to the console.</p>
 <p><strong>Examples:</strong></p>
 <pre><code class="language-ruby">run! &quot;rails server -b* -p3000&quot;
 puts &quot;this message will never be shown&quot;
 </code></pre>
-<h3><a class="header" href="#run_bg-string--options" id="run_bg-string--options">run_bg <em>string</em> [, <em>options</em>]</a></h3>
+<h3 id="run_bg-string--options"><a class="header" href="#run_bg-string--options">run_bg <em>string</em> [, <em>options</em>]</a></h3>
 <p>Run a command in the background, which you can later stop with <code>stop_bg</code>. </p>
 <p>Available options are:</p>
 <ul>
@@ -228,13 +234,13 @@ be stored in the working directory, or in <code>Runfile.pid_dir</code>.</li>
 <pre><code class="language-ruby">run_bg 'some/long-running/process'
 run_bg 'some/long-running/process', log: 'my.log', pid: 'daemon'
 </code></pre>
-<h3><a class="header" href="#stop_bg-string" id="stop_bg-string">stop_bg <em>string</em></a></h3>
+<h3 id="stop_bg-string"><a class="header" href="#stop_bg-string">stop_bg <em>string</em></a></h3>
 <p>Stop a command started with 'run_bg'. Provide the name of he pid file you 
 used in 'run_bg'</p>
 <p><strong>Example:</strong></p>
 <pre><code class="language-ruby">stop_bg 'server'
 </code></pre>
-<h3><a class="header" href="#before_run--block-" id="before_run--block-">before_run { <em>block</em> }</a></h3>
+<h3 id="before_run--block-"><a class="header" href="#before_run--block-">before_run { <em>block</em> }</a></h3>
 <p>Intercept each call before executed. Can be used to modify the command, 
 run something before it, or cancel it altogether.</p>
 <p>Your block receives the command as argument, and should return a command 
@@ -251,7 +257,7 @@ before_run do |command|
   ENV['PREVENT_EXECUTION'] ? false : command
 end
 </code></pre>
-<h3><a class="header" href="#after_run--block-" id="after_run--block-">after_run { <em>block</em> }</a></h3>
+<h3 id="after_run--block-"><a class="header" href="#after_run--block-">after_run { <em>block</em> }</a></h3>
 <p>Intercept each call before it exits. Note this is only useful with <code>run</code> 
 and <code>run_bg</code> but not with <code>run!</code> which exits immediately after execution.</p>
 <p><strong>Examples:</strong></p>
@@ -259,7 +265,7 @@ and <code>run_bg</code> but not with <code>run!</code> which exits immediately a
   puts &quot;Finished #{command}&quot;
 end
 </code></pre>
-<h2><a class="header" href="#configuration" id="configuration">Configuration</a></h2>
+<h2 id="configuration"><a class="header" href="#configuration">Configuration</a></h2>
 <p>You can configure several aspects of how these commands behave.</p>
 <p>Configuration can be done in one of two ways. Either use the direct 
 syntax: <code>Runfile.option = value</code>, or provide a block:</p>
@@ -269,17 +275,17 @@ end
 </code></pre>
 <p>Add the configuration anywhere in your Runfile (either inside an
 action or outside, at the beginning of the file).</p>
-<h3><a class="header" href="#pid_dir---configure-folder-for-pid-files" id="pid_dir---configure-folder-for-pid-files"><em>pid_dir</em> - configure folder for PID files</a></h3>
+<h3 id="pid_dir---configure-folder-for-pid-files"><a class="header" href="#pid_dir---configure-folder-for-pid-files"><em>pid_dir</em> - configure folder for PID files</a></h3>
 <p>PID files are stored in the working directory by default.</p>
 <pre><code class="language-ruby">Runfile.pid_dir = './tmp/pids'
 </code></pre>
-<h3><a class="header" href="#quiet---run-without-echoing-the-command" id="quiet---run-without-echoing-the-command"><em>quiet</em> - run without echoing the command</a></h3>
+<h3 id="quiet---run-without-echoing-the-command"><a class="header" href="#quiet---run-without-echoing-the-command"><em>quiet</em> - run without echoing the command</a></h3>
 <p>By default, calls to <code>run</code> will show the command before running it.
 Set <code>quiet</code> to true to change that.</p>
 <p><strong>Example:</strong></p>
 <pre><code class="language-ruby">Runfile.quiet = true
 </code></pre>
-<h2><a class="header" href="#example" id="example">Example</a></h2>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
 <p>See this <a href="https://github.com/DannyBen/runfile/blob/master/examples/r_exec/Runfile">example file</a> sample usage or this <a href="https://github.com/DannyBen/runfile/blob/master/features/exec.feature">feature file</a> to get an 
 idea of what is possible with this extension.</p>
 

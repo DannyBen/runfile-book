@@ -140,13 +140,19 @@
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
+                        
+                        <a href="https://github.com/DannyBen/runfile-book/edit/master/src/Creating-Reusable-Tasks.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                        
+
                     </div>
                 </div>
 
                 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -167,11 +173,11 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#creating-reusable-tasks" id="creating-reusable-tasks">Creating Reusable Tasks</a></h1>
+                        <h1 id="creating-reusable-tasks"><a class="header" href="#creating-reusable-tasks">Creating Reusable Tasks</a></h1>
 <p>You can easily build a set of tasks that can be reused in any Runfile.</p>
 <p>Since this is pure ruby, there are many ways to do so. The below is 
 an example.</p>
-<h2><a class="header" href="#step-1-create-your-common-tasks-file" id="step-1-create-your-common-tasks-file">Step 1: Create your common tasks file</a></h2>
+<h2 id="step-1-create-your-common-tasks-file"><a class="header" href="#step-1-create-your-common-tasks-file">Step 1: Create your common tasks file</a></h2>
 <p>Let's save this file as 'tasks.rb'</p>
 <pre><code class="language-ruby"># The reusable tasks module
 
@@ -199,7 +205,7 @@ module MyCommonTasks
   end
 end
 </code></pre>
-<h2><a class="header" href="#step-2-embed-the-tasks-in-your-runfile" id="step-2-embed-the-tasks-in-your-runfile">Step 2: Embed the tasks in your Runfile</a></h2>
+<h2 id="step-2-embed-the-tasks-in-your-runfile"><a class="header" href="#step-2-embed-the-tasks-in-your-runfile">Step 2: Embed the tasks in your Runfile</a></h2>
 <p>Create a <code>Runfile</code> file (you can simply run <code>run make</code>) and paste this
 content in it.</p>
 <pre><code class="language-ruby"># include our common tasks file
@@ -224,7 +230,7 @@ action :hello do |args|
   end
 end
 </code></pre>
-<h2><a class="header" href="#step-3-test-the-runfile" id="step-3-test-the-runfile">Step 3: Test the Runfile</a></h2>
+<h2 id="step-3-test-the-runfile"><a class="header" href="#step-3-test-the-runfile">Step 3: Test the Runfile</a></h2>
 <p>Running <code>run</code> will now show both the embedded and local tasks:</p>
 <pre><code>$ run
 Usage:
@@ -233,7 +239,7 @@ Usage:
   run hello [&lt;name&gt; --color]
   run (-h|--help|--version)
 </code></pre>
-<h2><a class="header" href="#packing-reusable-tasks-as-a-gem" id="packing-reusable-tasks-as-a-gem">Packing reusable tasks as a gem</a></h2>
+<h2 id="packing-reusable-tasks-as-a-gem"><a class="header" href="#packing-reusable-tasks-as-a-gem">Packing reusable tasks as a gem</a></h2>
 <p>You can pack your reusable tasks as a gem for all to enjoy.</p>
 <p>An example of such a gem, is the 
 <a href="https://github.com/DannyBen/runfile-tasks">runfile-tasks gem</a>

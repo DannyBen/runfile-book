@@ -142,13 +142,15 @@
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
+                        
+
                     </div>
                 </div>
 
                 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -169,12 +171,12 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#runfile-documentation" id="runfile-documentation">Runfile Documentation</a></h1>
+                        <h1 id="runfile-documentation"><a class="header" href="#runfile-documentation">Runfile Documentation</a></h1>
 <p><object data="/assets/cast.svg" style='width:100%'></object></p>
-<h2><a class="header" href="#table-of-contents" id="table-of-contents">Table of Contents</a></h2>
-<h3><a class="header" href="#a-hrefintroductionhtmlintroductiona" id="a-hrefintroductionhtmlintroductiona"><a href="Introduction.html">Introduction</a></a></h3>
+<h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
+<h3 id="a-hrefintroductionhtmlintroductiona"><a class="header" href="#a-hrefintroductionhtmlintroductiona"><a href="Introduction.html">Introduction</a></a></h3>
 <p>What is Runfile and how to use it.</p>
-<h3><a class="header" href="#a-hrefrunfile-command-referencerunfile-command-referencea" id="a-hrefrunfile-command-referencerunfile-command-referencea"><a href="Runfile-Command-Reference/">Runfile Command Reference</a></a></h3>
+<h3 id="a-hrefrunfile-command-referencerunfile-command-referencea"><a class="header" href="#a-hrefrunfile-command-referencerunfile-command-referencea"><a href="Runfile-Command-Reference/">Runfile Command Reference</a></a></h3>
 <p>An extensive description explaining how to construct your Runfile.<br />
 Jump directly to: </p>
 <ul>
@@ -184,23 +186,23 @@ Jump directly to: </p>
 <li><a href="Runfile-Command-Reference/Execution-Commands.html">Execution Commands</a></li>
 <li><a href="Runfile-Command-Reference/Misc-Commands.html">Misc Commands</a></li>
 </ul>
-<h3><a class="header" href="#a-hrefrunfile-location-and-filenamehtmlrunfile-location-and-filenamea" id="a-hrefrunfile-location-and-filenamehtmlrunfile-location-and-filenamea"><a href="Runfile-Location-and-Filename.html">Runfile Location and Filename</a></a></h3>
+<h3 id="a-hrefrunfile-location-and-filenamehtmlrunfile-location-and-filenamea"><a class="header" href="#a-hrefrunfile-location-and-filenamehtmlrunfile-location-and-filenamea"><a href="Runfile-Location-and-Filename.html">Runfile Location and Filename</a></a></h3>
 <p>All about the runfile search path, local and global (named) runfiles.</p>
-<h3><a class="header" href="#a-hrefcreating-reusable-taskshtmlcreating-reusable-tasksa" id="a-hrefcreating-reusable-taskshtmlcreating-reusable-tasksa"><a href="Creating-Reusable-Tasks.html">Creating Reusable Tasks</a></a></h3>
+<h3 id="a-hrefcreating-reusable-taskshtmlcreating-reusable-tasksa"><a class="header" href="#a-hrefcreating-reusable-taskshtmlcreating-reusable-tasksa"><a href="Creating-Reusable-Tasks.html">Creating Reusable Tasks</a></a></h3>
 <p>Create tasks you can reuse in more than one project.</p>
-<h3><a class="header" href="#a-hrefmultiple-project-runfileshtmlmultiple-project-runfilesa" id="a-hrefmultiple-project-runfileshtmlmultiple-project-runfilesa"><a href="Multiple-Project-Runfiles.html">Multiple Project Runfiles</a></a></h3>
+<h3 id="a-hrefmultiple-project-runfileshtmlmultiple-project-runfilesa"><a class="header" href="#a-hrefmultiple-project-runfileshtmlmultiple-project-runfilesa"><a href="Multiple-Project-Runfiles.html">Multiple Project Runfiles</a></a></h3>
 <p>For large projects with many Runfile tasks, you can easily separate
 your Runfile to smaller files by using a <code>.runfile</code> settings file.</p>
-<h2><a class="header" href="#related-gems" id="related-gems">Related Gems</a></h2>
-<h3><a class="header" href="#a-hrefhttpsgithubcomdannybenrunfile-taskspremade-tasks-runfile-tasksa" id="a-hrefhttpsgithubcomdannybenrunfile-taskspremade-tasks-runfile-tasksa"><a href="https://github.com/DannyBen/runfile-tasks">Premade Tasks: runfile-tasks</a></a></h3>
+<h2 id="related-gems"><a class="header" href="#related-gems">Related Gems</a></h2>
+<h3 id="a-hrefhttpsgithubcomdannybenrunfile-taskspremade-tasks-runfile-tasksa"><a class="header" href="#a-hrefhttpsgithubcomdannybenrunfile-taskspremade-tasks-runfile-tasksa"><a href="https://github.com/DannyBen/runfile-tasks">Premade Tasks: runfile-tasks</a></a></h3>
 <p>Easily add common tasks for code testing, gem publishing and more.</p>
-<h1><a class="header" href="#introduction-to-runfile" id="introduction-to-runfile">Introduction to Runfile</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="introduction-to-runfile"><a class="header" href="#introduction-to-runfile">Introduction to Runfile</a></h1>
 <p><strong>Runfile</strong> lets you create command line applications in a way similar 
 to <a href="https://github.com/ruby/rake">Rake</a>, but with the full power of <a href="http://docopt.org/">Docopt</a> command 
 line options.</p>
 <p>You create a <code>Runfile</code>, and execute commands with 
 <code>run command arguments -and --flags</code>.</p>
-<h2><a class="header" href="#if-you-are-not-familiar-with-rake-or-docopt" id="if-you-are-not-familiar-with-rake-or-docopt">If you are not familiar with Rake or Docopt...</a></h2>
+<h2 id="if-you-are-not-familiar-with-rake-or-docopt"><a class="header" href="#if-you-are-not-familiar-with-rake-or-docopt">If you are not familiar with Rake or Docopt...</a></h2>
 <p><strong>You don't have to be.</strong></p>
 <p>These are just the tools that inspired Runfile (and docopt is used 
 behind the scenes).</p>
@@ -208,7 +210,7 @@ behind the scenes).</p>
 application using Ruby code.</p>
 <p>The fastest way to understand how Runfile works, is to create one or
 play with <a href="https://github.com/DannyBen/runfile/tree/master/examples">one of the examples</a></p>
-<h3><a class="header" href="#to-create-your-first-runfile" id="to-create-your-first-runfile">To create your first Runfile:</a></h3>
+<h3 id="to-create-your-first-runfile"><a class="header" href="#to-create-your-first-runfile">To create your first Runfile:</a></h3>
 <ol>
 <li>Install Runfile - execute <code>gem install runfile</code></li>
 <li>Make sure it is installed - execute <code>run</code></li>
@@ -222,7 +224,7 @@ play with <a href="https://github.com/DannyBen/runfile/tree/master/examples">one
 </code></pre>
 <p>Take a look at the <a href="https://github.com/DannyBen/runfile/tree/master/examples">examples</a>, or the 
 <a href="Runfile-Command-Reference/">Runfile Command Reference</a></p>
-<h2><a class="header" href="#if-you-are-familiar-with-rake" id="if-you-are-familiar-with-rake">If you are familiar with Rake...</a></h2>
+<h2 id="if-you-are-familiar-with-rake"><a class="header" href="#if-you-are-familiar-with-rake">If you are familiar with Rake...</a></h2>
 <p>If you know rake, then Runfile is like Rakefile. You use a special, 
 lightweight language (DSL) to define tasks in ruby.</p>
 <p>One of the key differences between a Runfile and a Rakefile, is that 
@@ -239,7 +241,7 @@ action :watch do |args|
   # your code here
 end
 </code></pre>
-<h2><a class="header" href="#if-you-are-familiar-with-docopt" id="if-you-are-familiar-with-docopt">If you are familiar with Docopt...</a></h2>
+<h2 id="if-you-are-familiar-with-docopt"><a class="header" href="#if-you-are-familiar-with-docopt">If you are familiar with Docopt...</a></h2>
 <p>If you have ever used Docopt, you know it is one of the simplest ways
 to create expressive command line applications. Runfile is sort of a 
 DSL around docopt.</p>
@@ -280,7 +282,7 @@ Options:
 <p>See the full <a href="Runfile-Command-Reference/">Runfile Command Reference</a> 
 (it is short and not at all scary) or learn more about <a href="Runfile-Location-and-Filename.html">Runfile 
 Locations and Filenames</a>.</p>
-<h1><a class="header" href="#runfile-command-reference" id="runfile-command-reference">Runfile Command Reference</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="runfile-command-reference"><a class="header" href="#runfile-command-reference">Runfile Command Reference</a></h1>
 <p><strong>Runfile is ruby</strong>. You can write any ruby code in it as usual.</p>
 <blockquote>
 <p><i class='fa fa-info-circle'></i> <strong>Tip</strong>: To create an initial Runfile, go to a folder that does not 
@@ -296,40 +298,40 @@ action :greet do |args|
   say &quot;Hello #{args['&lt;name&gt;']}&quot; 
 end
 </code></pre>
-<h2><a class="header" href="#a-hrefrunfile-command-referencedefining-program-detailshtmldefining-program-detailsa" id="a-hrefrunfile-command-referencedefining-program-detailshtmldefining-program-detailsa"><a href="Runfile-Command-Reference/Defining-Program-Details.html">Defining Program Details</a></a></h2>
+<h2 id="a-hrefrunfile-command-referencedefining-program-detailshtmldefining-program-detailsa"><a class="header" href="#a-hrefrunfile-command-referencedefining-program-detailshtmldefining-program-detailsa"><a href="Runfile-Command-Reference/Defining-Program-Details.html">Defining Program Details</a></a></h2>
 <p>Commands to specify information about the program, such as its name and 
 version.</p>
-<h2><a class="header" href="#a-hrefrunfile-command-referencedefining-program-actionshtmldefining-program-actionsa" id="a-hrefrunfile-command-referencedefining-program-actionshtmldefining-program-actionsa"><a href="Runfile-Command-Reference/Defining-Program-Actions.html">Defining Program Actions</a></a></h2>
+<h2 id="a-hrefrunfile-command-referencedefining-program-actionshtmldefining-program-actionsa"><a class="header" href="#a-hrefrunfile-command-referencedefining-program-actionshtmldefining-program-actionsa"><a href="Runfile-Command-Reference/Defining-Program-Actions.html">Defining Program Actions</a></a></h2>
 <p>Commands to define program actions</p>
-<h2><a class="header" href="#a-hrefrunfile-command-referenceoutput-commandshtmloutput-commandsa" id="a-hrefrunfile-command-referenceoutput-commandshtmloutput-commandsa"><a href="Runfile-Command-Reference/Output-Commands.html">Output Commands</a></a></h2>
+<h2 id="a-hrefrunfile-command-referenceoutput-commandshtmloutput-commandsa"><a class="header" href="#a-hrefrunfile-command-referenceoutput-commandshtmloutput-commandsa"><a href="Runfile-Command-Reference/Output-Commands.html">Output Commands</a></a></h2>
 <p>Commands that can be executed in any action to print colorful, indented
 messages to the console.</p>
-<h2><a class="header" href="#a-hrefrunfile-command-referenceexecution-commandshtmlexecution-commandsa" id="a-hrefrunfile-command-referenceexecution-commandshtmlexecution-commandsa"><a href="Runfile-Command-Reference/Execution-Commands.html">Execution Commands</a></a></h2>
+<h2 id="a-hrefrunfile-command-referenceexecution-commandshtmlexecution-commandsa"><a class="header" href="#a-hrefrunfile-command-referenceexecution-commandshtmlexecution-commandsa"><a href="Runfile-Command-Reference/Execution-Commands.html">Execution Commands</a></a></h2>
 <p>Commands that can be executed in any action to run external programs in
 the foreground or background easily.</p>
-<h2><a class="header" href="#a-hrefrunfile-command-referencemisc-commandshtmlmisc-commandsa" id="a-hrefrunfile-command-referencemisc-commandshtmlmisc-commandsa"><a href="Runfile-Command-Reference/Misc-Commands.html">Misc Commands</a></a></h2>
+<h2 id="a-hrefrunfile-command-referencemisc-commandshtmlmisc-commandsa"><a class="header" href="#a-hrefrunfile-command-referencemisc-commandshtmlmisc-commandsa"><a href="Runfile-Command-Reference/Misc-Commands.html">Misc Commands</a></a></h2>
 <p>Additional commands you can use in your action blocks.</p>
-<h1><a class="header" href="#defining-program-details" id="defining-program-details">Defining Program Details</a></h1>
-<h2><a class="header" href="#cheatsheet" id="cheatsheet">Cheatsheet</a></h2>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="defining-program-details"><a class="header" href="#defining-program-details">Defining Program Details</a></h1>
+<h2 id="cheatsheet"><a class="header" href="#cheatsheet">Cheatsheet</a></h2>
 <pre><code class="language-ruby">title   'My Utilities'
 summary 'Utilities for my Rails'
 version '0.1.0'
 </code></pre>
-<h2><a class="header" href="#reference" id="reference">Reference</a></h2>
-<h3><a class="header" href="#title-string" id="title-string">title <em>string</em></a></h3>
+<h2 id="reference"><a class="header" href="#reference">Reference</a></h2>
+<h3 id="title-string"><a class="header" href="#title-string">title <em>string</em></a></h3>
 <p>Define the title of the application.<br />
 This command is optional.</p>
 <p><strong>Example:</strong> <code>title &quot;RoadRunner&quot;</code></p>
-<h3><a class="header" href="#summary-string" id="summary-string">summary <em>string</em></a></h3>
+<h3 id="summary-string"><a class="header" href="#summary-string">summary <em>string</em></a></h3>
 <p>Define the one line application help message.<br />
 This command is optional.</p>
 <p><strong>Example:</strong> <code>summary &quot;My new application&quot;</code></p>
-<h3><a class="header" href="#version-string" id="version-string">version <em>string</em></a></h3>
+<h3 id="version-string"><a class="header" href="#version-string">version <em>string</em></a></h3>
 <p>Specify a version string for your program.<br />
 This command is optional.</p>
 <p><strong>Example:</strong> <code>version &quot;0.1.0&quot;</code></p>
-<h1><a class="header" href="#defining-program-actions" id="defining-program-actions">Defining Program Actions</a></h1>
-<h2><a class="header" href="#cheatsheet-1" id="cheatsheet-1">Cheatsheet</a></h2>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="defining-program-actions"><a class="header" href="#defining-program-actions">Defining Program Actions</a></h1>
+<h2 id="cheatsheet-1"><a class="header" href="#cheatsheet-1">Cheatsheet</a></h2>
 <pre><code class="language-ruby"># --- Action Definition
 
 usage   &quot;server PORT [--background]&quot;
@@ -354,8 +356,8 @@ end
 
 endcommand
 </code></pre>
-<h2><a class="header" href="#reference-1" id="reference-1">Reference</a></h2>
-<h3><a class="header" href="#usage-string" id="usage-string">usage <em>string</em></a></h3>
+<h2 id="reference-1"><a class="header" href="#reference-1">Reference</a></h2>
+<h3 id="usage-string"><a class="header" href="#usage-string">usage <em>string</em></a></h3>
 <p>Specify the usage pattern of the following <code>action</code>.
 This string is expected to be in any format recognized by docopt.</p>
 <p>In some cases ( <a href="https://github.com/DannyBen/runfile/blob/master/examples/l_compact_usage/Runfile">compact usage example</a> ) 
@@ -375,13 +377,13 @@ usage &quot;run [--fast --slow]&quot;  # The next action (:run) has two
 usage false                  # Disable usage pattern for the next 
                              # action.
 </code></pre>
-<h3><a class="header" href="#help-string" id="help-string">help <em>string</em></a></h3>
+<h3 id="help-string"><a class="header" href="#help-string">help <em>string</em></a></h3>
 <p>Specify the help message for the following action.
 This is the message that will be displayed when you execute 
 <code>run --help</code></p>
 <p>This command is optional.</p>
 <p><strong>Example:</strong> <code>help &quot;Greet the user with a colorful 'Hello!'&quot;</code></p>
-<h3><a class="header" href="#option-string-description--label" id="option-string-description--label">option <em>string</em>, <em>description</em> [, <em>label</em>]</a></h3>
+<h3 id="option-string-description--label"><a class="header" href="#option-string-description--label">option <em>string</em>, <em>description</em> [, <em>label</em>]</a></h3>
 <p>Specify the help information for any of the option flags.
 This is the place where you can specify that a certain flag also has 
 a short version.</p>
@@ -396,7 +398,7 @@ under a different caption.</p>
 <pre><code>option &quot;-c --color&quot;, &quot;Show message with a color&quot;
 option &quot;--force&quot;, &quot;Force delete&quot;, &quot;Delete Options&quot;
 </code></pre>
-<h3><a class="header" href="#param-string-description--label" id="param-string-description--label">param <em>string</em>, <em>description</em> [, <em>label</em>]</a></h3>
+<h3 id="param-string-description--label"><a class="header" href="#param-string-description--label">param <em>string</em>, <em>description</em> [, <em>label</em>]</a></h3>
 <p>Specify the help information for any of the positional parameters.
 This is purely decorative and has no impact on the operation of the Runfile.</p>
 <p>Normally, the help message for all parameters appear under the <code>Parameters:</code>
@@ -410,7 +412,7 @@ under a different caption.</p>
 <pre><code>param &quot;PORT&quot;, &quot;Server port to listen to&quot;
 param &quot;SOURCE&quot;, &quot;File to copy&quot;, &quot;Copy Options&quot;
 </code></pre>
-<h3><a class="header" href="#env_var-string-description--label" id="env_var-string-description--label">env_var <em>string</em>, <em>description</em> [, <em>label</em>]</a></h3>
+<h3 id="env_var-string-description--label"><a class="header" href="#env_var-string-description--label">env_var <em>string</em>, <em>description</em> [, <em>label</em>]</a></h3>
 <p>Specify the help information for any environment variables your Runfile may
 need. This is purely decorative and has no impact on the operation of the
 Runfile.</p>
@@ -425,7 +427,7 @@ argument, it will appear under a different caption.</p>
 <pre><code>env_var &quot;HOST&quot;, &quot;Host address to listen on&quot;
 env_var &quot;USER&quot;, &quot;SSH user&quot;, &quot;SSH Environment Variables&quot;
 </code></pre>
-<h3><a class="header" href="#example-string" id="example-string">example <em>string</em></a></h3>
+<h3 id="example-string"><a class="header" href="#example-string">example <em>string</em></a></h3>
 <p>Add an example command to the general help information. 
 When adding an example, the command <code>run --help</code> will show an 
 <code>Examples:</code> section at the end of the help text, with all added examples.</p>
@@ -439,7 +441,7 @@ of your example text, it is done automatically.</p>
 <pre><code>example &quot;copy source.txt dest.txt --force&quot;
 example &quot;copy source.txt --here&quot;
 </code></pre>
-<h3><a class="header" href="#action-name--alias--block-" id="action-name--alias--block-">action <em>name</em> [, <em>alias</em>] { <em>block</em> }</a></h3>
+<h3 id="action-name--alias--block-"><a class="header" href="#action-name--alias--block-">action <em>name</em> [, <em>alias</em>] { <em>block</em> }</a></h3>
 <p>Define the actual action block that will be called.<br />
 This command is required</p>
 <p><strong>Examples:</strong></p>
@@ -467,7 +469,7 @@ end
 <blockquote>
 <p><i class='fa fa-arrow-right'></i> <strong>See Also</strong>: <a href="https://github.com/DannyBen/runfile/blob/master/examples/p_alias/Runfile">Alias Example</a></p>
 </blockquote>
-<h3><a class="header" href="#command-string" id="command-string">command <em>string</em></a></h3>
+<h3 id="command-string"><a class="header" href="#command-string">command <em>string</em></a></h3>
 <p>The <code>command</code> command lets you define a namespace. Once you use this
 command, any subsequent action will be associated with this namespace.</p>
 <p>This is a way to create sub commands.</p>
@@ -477,13 +479,13 @@ command, any subsequent action will be associated with this namespace.</p>
 <blockquote>
 <p><i class='fa fa-arrow-right'></i> <strong>See Also</strong>: <a href="https://github.com/DannyBen/runfile/blob/master/examples/f_namespace/Runfile">Namespace Example</a></p>
 </blockquote>
-<h3><a class="header" href="#endcommand" id="endcommand">endcommand</a></h3>
+<h3 id="endcommand"><a class="header" href="#endcommand">endcommand</a></h3>
 <p>Alias of <code>command</code>. Intended as a syntactic sugar so that you can end
 a <code>command 'namespace'</code> with <code>endcommand</code> instead of an empty 
 <code>command</code>.</p>
 <p>This command is optional.</p>
-<h1><a class="header" href="#output-commands" id="output-commands">Output Commands</a></h1>
-<h2><a class="header" href="#cheatsheet-2" id="cheatsheet-2">Cheatsheet</a></h2>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="output-commands"><a class="header" href="#output-commands">Output Commands</a></h1>
+<h2 id="cheatsheet-2"><a class="header" href="#cheatsheet-2">Cheatsheet</a></h2>
 <pre><code class="language-ruby">say 'anything'
 say '!txtred!anything in red'
 say 'only one !txtred!word!txtrst! in red'
@@ -493,12 +495,12 @@ say_status :download, 'Download in progress', :txtblu
 word_wrap '  Indent a potentially wrapping line by two spaces'
 say word_wrap '  Indent a potentially wrapping line by two spaces and say it'
 </code></pre>
-<h2><a class="header" href="#reference-2" id="reference-2">Reference</a></h2>
+<h2 id="reference-2"><a class="header" href="#reference-2">Reference</a></h2>
 <p>All these commands can be used inside your <code>:action</code> blocks.</p>
 <p>These commands are provided by the 
 <a href="https://github.com/DannyBen/colsole">Colsole gem</a> which is already 
 bundled with Runfile.</p>
-<h3><a class="header" href="#say-string" id="say-string">say <em>string</em></a></h3>
+<h3 id="say-string"><a class="header" href="#say-string">say <em>string</em></a></h3>
 <p>Print a message to screen, with support for color markers and 
 partial strings.</p>
 <p>End the string with a space to force the cursor to stay at the same
@@ -509,7 +511,7 @@ say &quot;!txtgrn!I am green&quot;
 say &quot;Legen... wait for it... &quot;
 say &quot;dary&quot;
 </code></pre>
-<h3><a class="header" href="#resay-string" id="resay-string">resay <em>string</em></a></h3>
+<h3 id="resay-string"><a class="header" href="#resay-string">resay <em>string</em></a></h3>
 <p>Erase the current output line and print a new message. Should be 
 called only after a space terminated call to <code>say</code> to ensure the 
 cursor is at the same line.</p>
@@ -517,13 +519,13 @@ cursor is at the same line.</p>
 <pre><code class="language-ruby">say &quot;Downloading... &quot;
 resay &quot;Downloaded&quot;
 </code></pre>
-<h3><a class="header" href="#say_status-status-message--color" id="say_status-status-message--color">say_status <em>status</em>, <em>message</em> [, <em>color</em>]</a></h3>
+<h3 id="say_status-status-message--color"><a class="header" href="#say_status-status-message--color">say_status <em>status</em>, <em>message</em> [, <em>color</em>]</a></h3>
 <p>Print a message to screen, with a colored status tag.</p>
 <p><strong>Examples:</strong></p>
 <pre><code class="language-ruby">say_status :success, &quot;Task completed&quot;
 say_status :error, &quot;Task failed&quot;, :txtred
 </code></pre>
-<h3><a class="header" href="#word_wrap-string--length" id="word_wrap-string--length">word_wrap <em>string</em> [, <em>length</em>]</a></h3>
+<h3 id="word_wrap-string--length"><a class="header" href="#word_wrap-string--length">word_wrap <em>string</em> [, <em>length</em>]</a></h3>
 <p>If you wish to print a string and make it wrap automatically based
 on the width of the terminal, use <code>word_wrap</code>.</p>
 <p>The function is also sensitive to any leading spaces. These will be
@@ -534,8 +536,8 @@ strings.</p>
 say word_wrap(&quot;   one two three four&quot;, 10)
 say word_wrap &quot;Some long line ... that ends here&quot;
 </code></pre>
-<h1><a class="header" href="#execution-commands" id="execution-commands">Execution Commands</a></h1>
-<h2><a class="header" href="#cheatsheet-3" id="cheatsheet-3">Cheatsheet</a></h2>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="execution-commands"><a class="header" href="#execution-commands">Execution Commands</a></h1>
+<h2 id="cheatsheet-3"><a class="header" href="#cheatsheet-3">Cheatsheet</a></h2>
 <pre><code class="language-ruby">
 # --- Running commands and services
 
@@ -567,22 +569,22 @@ end
 Runfile.pid_dir = 'tmp'
 
 </code></pre>
-<h2><a class="header" href="#reference-3" id="reference-3">Reference</a></h2>
-<h3><a class="header" href="#run-string" id="run-string">run <em>string</em></a></h3>
+<h2 id="reference-3"><a class="header" href="#reference-3">Reference</a></h2>
+<h3 id="run-string"><a class="header" href="#run-string">run <em>string</em></a></h3>
 <p>Print and run a command. Wait until it is done and continue.
 This is executed using <code>system</code>. If <code>Runfile.quiet</code> is true, it will
 not echo the command to the console.</p>
 <p><strong>Example:</strong></p>
 <pre><code class="language-ruby">run &quot;rails server -b* -p3000&quot;
 </code></pre>
-<h3><a class="header" href="#run-string-1" id="run-string-1">run! <em>string</em></a></h3>
+<h3 id="run-string-1"><a class="header" href="#run-string-1">run! <em>string</em></a></h3>
 <p>Print and run a command, then exit. This is executed using <code>exec</code>.
 If <code>Runfile.quiet</code> is true, it will not echo the command to the console.</p>
 <p><strong>Examples:</strong></p>
 <pre><code class="language-ruby">run! &quot;rails server -b* -p3000&quot;
 puts &quot;this message will never be shown&quot;
 </code></pre>
-<h3><a class="header" href="#run_bg-string--options" id="run_bg-string--options">run_bg <em>string</em> [, <em>options</em>]</a></h3>
+<h3 id="run_bg-string--options"><a class="header" href="#run_bg-string--options">run_bg <em>string</em> [, <em>options</em>]</a></h3>
 <p>Run a command in the background, which you can later stop with <code>stop_bg</code>. </p>
 <p>Available options are:</p>
 <ul>
@@ -595,13 +597,13 @@ be stored in the working directory, or in <code>Runfile.pid_dir</code>.</li>
 <pre><code class="language-ruby">run_bg 'some/long-running/process'
 run_bg 'some/long-running/process', log: 'my.log', pid: 'daemon'
 </code></pre>
-<h3><a class="header" href="#stop_bg-string" id="stop_bg-string">stop_bg <em>string</em></a></h3>
+<h3 id="stop_bg-string"><a class="header" href="#stop_bg-string">stop_bg <em>string</em></a></h3>
 <p>Stop a command started with 'run_bg'. Provide the name of he pid file you 
 used in 'run_bg'</p>
 <p><strong>Example:</strong></p>
 <pre><code class="language-ruby">stop_bg 'server'
 </code></pre>
-<h3><a class="header" href="#before_run--block-" id="before_run--block-">before_run { <em>block</em> }</a></h3>
+<h3 id="before_run--block-"><a class="header" href="#before_run--block-">before_run { <em>block</em> }</a></h3>
 <p>Intercept each call before executed. Can be used to modify the command, 
 run something before it, or cancel it altogether.</p>
 <p>Your block receives the command as argument, and should return a command 
@@ -618,7 +620,7 @@ before_run do |command|
   ENV['PREVENT_EXECUTION'] ? false : command
 end
 </code></pre>
-<h3><a class="header" href="#after_run--block-" id="after_run--block-">after_run { <em>block</em> }</a></h3>
+<h3 id="after_run--block-"><a class="header" href="#after_run--block-">after_run { <em>block</em> }</a></h3>
 <p>Intercept each call before it exits. Note this is only useful with <code>run</code> 
 and <code>run_bg</code> but not with <code>run!</code> which exits immediately after execution.</p>
 <p><strong>Examples:</strong></p>
@@ -626,7 +628,7 @@ and <code>run_bg</code> but not with <code>run!</code> which exits immediately a
   puts &quot;Finished #{command}&quot;
 end
 </code></pre>
-<h2><a class="header" href="#configuration" id="configuration">Configuration</a></h2>
+<h2 id="configuration"><a class="header" href="#configuration">Configuration</a></h2>
 <p>You can configure several aspects of how these commands behave.</p>
 <p>Configuration can be done in one of two ways. Either use the direct 
 syntax: <code>Runfile.option = value</code>, or provide a block:</p>
@@ -636,25 +638,25 @@ end
 </code></pre>
 <p>Add the configuration anywhere in your Runfile (either inside an
 action or outside, at the beginning of the file).</p>
-<h3><a class="header" href="#pid_dir---configure-folder-for-pid-files" id="pid_dir---configure-folder-for-pid-files"><em>pid_dir</em> - configure folder for PID files</a></h3>
+<h3 id="pid_dir---configure-folder-for-pid-files"><a class="header" href="#pid_dir---configure-folder-for-pid-files"><em>pid_dir</em> - configure folder for PID files</a></h3>
 <p>PID files are stored in the working directory by default.</p>
 <pre><code class="language-ruby">Runfile.pid_dir = './tmp/pids'
 </code></pre>
-<h3><a class="header" href="#quiet---run-without-echoing-the-command" id="quiet---run-without-echoing-the-command"><em>quiet</em> - run without echoing the command</a></h3>
+<h3 id="quiet---run-without-echoing-the-command"><a class="header" href="#quiet---run-without-echoing-the-command"><em>quiet</em> - run without echoing the command</a></h3>
 <p>By default, calls to <code>run</code> will show the command before running it.
 Set <code>quiet</code> to true to change that.</p>
 <p><strong>Example:</strong></p>
 <pre><code class="language-ruby">Runfile.quiet = true
 </code></pre>
-<h2><a class="header" href="#example" id="example">Example</a></h2>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
 <p>See this <a href="https://github.com/DannyBen/runfile/blob/master/examples/r_exec/Runfile">example file</a> sample usage or this <a href="https://github.com/DannyBen/runfile/blob/master/features/exec.feature">feature file</a> to get an 
 idea of what is possible with this extension.</p>
-<h1><a class="header" href="#misc-commands" id="misc-commands">Misc Commands</a></h1>
-<h2><a class="header" href="#cheatsheet-4" id="cheatsheet-4">Cheatsheet</a></h2>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="misc-commands"><a class="header" href="#misc-commands">Misc Commands</a></h1>
+<h2 id="cheatsheet-4"><a class="header" href="#cheatsheet-4">Cheatsheet</a></h2>
 <pre><code class="language-ruby">execute 'other_action'
 </code></pre>
-<h2><a class="header" href="#reference-4" id="reference-4">Reference</a></h2>
-<h3><a class="header" href="#execute-string" id="execute-string">execute <em>string</em></a></h3>
+<h2 id="reference-4"><a class="header" href="#reference-4">Reference</a></h2>
+<h3 id="execute-string"><a class="header" href="#execute-string">execute <em>string</em></a></h3>
 <p>Call another action. This command accepts a single string argument
 which should include the command as if you type it in the command 
 prompt (only without the <code>run</code> prefix).</p>
@@ -662,7 +664,7 @@ prompt (only without the <code>run</code> prefix).</p>
 <blockquote>
 <p><i class='fa fa-arrow-right'></i> <strong>See Also</strong>: <a href="https://github.com/DannyBen/runfile/blob/master/examples/i_crosscall/Runfile">Cross Call Example</a></p>
 </blockquote>
-<h1><a class="header" href="#runfile-location-and-filename" id="runfile-location-and-filename">Runfile Location and Filename</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="runfile-location-and-filename"><a class="header" href="#runfile-location-and-filename">Runfile Location and Filename</a></h1>
 <p>Runfile is designed to help you create both project specific command
 line tools, and system wide command line applications.</p>
 <p><strong>Project Runfiles</strong> are simply named <strong>Runfile</strong> and can only be 
@@ -685,7 +687,7 @@ use it as a configuration file to tell us where the runfiles are.
 sub-directories.</li>
 <li>If one or more were found, show a list of all of them.</li>
 </ul>
-<h2><a class="header" href="#using-a-project-runfile" id="using-a-project-runfile">Using a project Runfile</a></h2>
+<h2 id="using-a-project-runfile"><a class="header" href="#using-a-project-runfile">Using a project Runfile</a></h2>
 <pre><code>$ cd /your/project
 
 $ run new
@@ -710,7 +712,7 @@ action :command do |args|
   say &quot;Command running...&quot;
 end
 </code></pre>
-<h2><a class="header" href="#using-named-runfiles" id="using-named-runfiles">Using Named Runfiles</a></h2>
+<h2 id="using-named-runfiles"><a class="header" href="#using-named-runfiles">Using Named Runfiles</a></h2>
 <pre><code>$ cd /your/project
 
 $ run new greet
@@ -745,7 +747,7 @@ anywhere in the PATH.
   run greet ........................ /path/to/file
   run hotdog ....................... /path/to/file
 </code></pre>
-<h2><a class="header" href="#custom-location-for-named-runfiles" id="custom-location-for-named-runfiles">Custom Location for Named Runfiles</a></h2>
+<h2 id="custom-location-for-named-runfiles"><a class="header" href="#custom-location-for-named-runfiles">Custom Location for Named Runfiles</a></h2>
 <p>For more advanced uses, you can define multiple Runfiles per project.</p>
 <p>This can be handy if you have a large set of commands and wish to 
 separate them to multiple files.</p>
@@ -759,7 +761,7 @@ folder: lib/commands
 helper file, and creating command shortcuts.</p>
 <p>Read more in the <a href="https://github.com/DannyBen/runfile/wiki/Multiple-Project-Runfiles">Multiple Project Runfiles</a> page, or see the 
 <a href="https://github.com/DannyBen/runfile/tree/master/examples/s_settings">Settings Example</a></p>
-<h2><a class="header" href="#ignoring-the-local-runfile" id="ignoring-the-local-runfile">Ignoring the local Runfile</a></h2>
+<h2 id="ignoring-the-local-runfile"><a class="header" href="#ignoring-the-local-runfile">Ignoring the local Runfile</a></h2>
 <p>In case you are using both local Runfiles and global named runfiles, you may find
 yourself in a situation where you are trying to run a named runfile from a 
 folder that contains a local Runfile.</p>
@@ -768,18 +770,18 @@ runfiles. </p>
 <p>To overcome this issue, <strong>use <code>run!</code> instead of <code>run</code></strong>.</p>
 <p>The <code>run!</code> command will ignore the local Runfile and only look for 
 named runfiles.</p>
-<h3><a class="header" href="#note-for-rvm-users" id="note-for-rvm-users">Note for RVM users</a></h3>
+<h3 id="note-for-rvm-users"><a class="header" href="#note-for-rvm-users">Note for RVM users</a></h3>
 <p>If you are using RVM, it is recommended you add this to your <code>.bashrc</code>:</p>
 <pre><code class="language-shell">export NOEXEC_EXCLUDE=&quot;run!&quot;
 </code></pre>
 <p>This will prevent RVM from silently prepending it with <code>bundle exec</code>.</p>
 <p>More information is available in the <a href="https://rvm.io/integration/bundler">RVM documentation</a>
 and in the <a href="https://github.com/rvm/rubygems-bundler">RVM GitHub Repository</a>.</p>
-<h1><a class="header" href="#creating-reusable-tasks" id="creating-reusable-tasks">Creating Reusable Tasks</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="creating-reusable-tasks"><a class="header" href="#creating-reusable-tasks">Creating Reusable Tasks</a></h1>
 <p>You can easily build a set of tasks that can be reused in any Runfile.</p>
 <p>Since this is pure ruby, there are many ways to do so. The below is 
 an example.</p>
-<h2><a class="header" href="#step-1-create-your-common-tasks-file" id="step-1-create-your-common-tasks-file">Step 1: Create your common tasks file</a></h2>
+<h2 id="step-1-create-your-common-tasks-file"><a class="header" href="#step-1-create-your-common-tasks-file">Step 1: Create your common tasks file</a></h2>
 <p>Let's save this file as 'tasks.rb'</p>
 <pre><code class="language-ruby"># The reusable tasks module
 
@@ -807,7 +809,7 @@ module MyCommonTasks
   end
 end
 </code></pre>
-<h2><a class="header" href="#step-2-embed-the-tasks-in-your-runfile" id="step-2-embed-the-tasks-in-your-runfile">Step 2: Embed the tasks in your Runfile</a></h2>
+<h2 id="step-2-embed-the-tasks-in-your-runfile"><a class="header" href="#step-2-embed-the-tasks-in-your-runfile">Step 2: Embed the tasks in your Runfile</a></h2>
 <p>Create a <code>Runfile</code> file (you can simply run <code>run make</code>) and paste this
 content in it.</p>
 <pre><code class="language-ruby"># include our common tasks file
@@ -832,7 +834,7 @@ action :hello do |args|
   end
 end
 </code></pre>
-<h2><a class="header" href="#step-3-test-the-runfile" id="step-3-test-the-runfile">Step 3: Test the Runfile</a></h2>
+<h2 id="step-3-test-the-runfile"><a class="header" href="#step-3-test-the-runfile">Step 3: Test the Runfile</a></h2>
 <p>Running <code>run</code> will now show both the embedded and local tasks:</p>
 <pre><code>$ run
 Usage:
@@ -841,7 +843,7 @@ Usage:
   run hello [&lt;name&gt; --color]
   run (-h|--help|--version)
 </code></pre>
-<h2><a class="header" href="#packing-reusable-tasks-as-a-gem" id="packing-reusable-tasks-as-a-gem">Packing reusable tasks as a gem</a></h2>
+<h2 id="packing-reusable-tasks-as-a-gem"><a class="header" href="#packing-reusable-tasks-as-a-gem">Packing reusable tasks as a gem</a></h2>
 <p>You can pack your reusable tasks as a gem for all to enjoy.</p>
 <p>An example of such a gem, is the 
 <a href="https://github.com/DannyBen/runfile-tasks">runfile-tasks gem</a>
@@ -851,7 +853,7 @@ which provides a collection of tasks like:</p>
 <li>Tasks for packing and publishing gems</li>
 </ul>
 <p>And more.</p>
-<h1><a class="header" href="#multiple-project-runfiles" id="multiple-project-runfiles">Multiple Project Runfiles</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="multiple-project-runfiles"><a class="header" href="#multiple-project-runfiles">Multiple Project Runfiles</a></h1>
 <p>Runfile provides another mechanism for more advanced uses.</p>
 <p>This mechanism lets you have multiple named runfiles per project. This is
 useful when your Runfile becomes too large, or when you wish to separate
@@ -861,7 +863,7 @@ it to logical units.</p>
 <li>Delete the <code>Runfile</code> file from your project's folder.</li>
 <li>Create a <code>.runfile</code> settings file (YAML) in your project's folder.</li>
 </ul>
-<h2><a class="header" href="#the-runfile-configuration-file" id="the-runfile-configuration-file">The .runfile Configuration File</a></h2>
+<h2 id="the-runfile-configuration-file"><a class="header" href="#the-runfile-configuration-file">The .runfile Configuration File</a></h2>
 <pre><code class="language-yaml"># .runfile
 # Runfile settings YAML 
 

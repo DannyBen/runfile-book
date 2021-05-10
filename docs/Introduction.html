@@ -140,13 +140,19 @@
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
+                        
+                        <a href="https://github.com/DannyBen/runfile-book/edit/master/src/Introduction.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                        
+
                     </div>
                 </div>
 
                 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -167,13 +173,13 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#introduction-to-runfile" id="introduction-to-runfile">Introduction to Runfile</a></h1>
+                        <h1 id="introduction-to-runfile"><a class="header" href="#introduction-to-runfile">Introduction to Runfile</a></h1>
 <p><strong>Runfile</strong> lets you create command line applications in a way similar 
 to <a href="https://github.com/ruby/rake">Rake</a>, but with the full power of <a href="http://docopt.org/">Docopt</a> command 
 line options.</p>
 <p>You create a <code>Runfile</code>, and execute commands with 
 <code>run command arguments -and --flags</code>.</p>
-<h2><a class="header" href="#if-you-are-not-familiar-with-rake-or-docopt" id="if-you-are-not-familiar-with-rake-or-docopt">If you are not familiar with Rake or Docopt...</a></h2>
+<h2 id="if-you-are-not-familiar-with-rake-or-docopt"><a class="header" href="#if-you-are-not-familiar-with-rake-or-docopt">If you are not familiar with Rake or Docopt...</a></h2>
 <p><strong>You don't have to be.</strong></p>
 <p>These are just the tools that inspired Runfile (and docopt is used 
 behind the scenes).</p>
@@ -181,7 +187,7 @@ behind the scenes).</p>
 application using Ruby code.</p>
 <p>The fastest way to understand how Runfile works, is to create one or
 play with <a href="https://github.com/DannyBen/runfile/tree/master/examples">one of the examples</a></p>
-<h3><a class="header" href="#to-create-your-first-runfile" id="to-create-your-first-runfile">To create your first Runfile:</a></h3>
+<h3 id="to-create-your-first-runfile"><a class="header" href="#to-create-your-first-runfile">To create your first Runfile:</a></h3>
 <ol>
 <li>Install Runfile - execute <code>gem install runfile</code></li>
 <li>Make sure it is installed - execute <code>run</code></li>
@@ -195,7 +201,7 @@ play with <a href="https://github.com/DannyBen/runfile/tree/master/examples">one
 </code></pre>
 <p>Take a look at the <a href="https://github.com/DannyBen/runfile/tree/master/examples">examples</a>, or the 
 <a href="Runfile-Command-Reference/">Runfile Command Reference</a></p>
-<h2><a class="header" href="#if-you-are-familiar-with-rake" id="if-you-are-familiar-with-rake">If you are familiar with Rake...</a></h2>
+<h2 id="if-you-are-familiar-with-rake"><a class="header" href="#if-you-are-familiar-with-rake">If you are familiar with Rake...</a></h2>
 <p>If you know rake, then Runfile is like Rakefile. You use a special, 
 lightweight language (DSL) to define tasks in ruby.</p>
 <p>One of the key differences between a Runfile and a Rakefile, is that 
@@ -212,7 +218,7 @@ action :watch do |args|
   # your code here
 end
 </code></pre>
-<h2><a class="header" href="#if-you-are-familiar-with-docopt" id="if-you-are-familiar-with-docopt">If you are familiar with Docopt...</a></h2>
+<h2 id="if-you-are-familiar-with-docopt"><a class="header" href="#if-you-are-familiar-with-docopt">If you are familiar with Docopt...</a></h2>
 <p>If you have ever used Docopt, you know it is one of the simplest ways
 to create expressive command line applications. Runfile is sort of a 
 DSL around docopt.</p>

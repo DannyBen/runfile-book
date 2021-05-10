@@ -140,13 +140,19 @@
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
+                        
+                        <a href="https://github.com/DannyBen/runfile-book/edit/master/src/Runfile-Command-Reference/Output-Commands.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                        
+
                     </div>
                 </div>
 
                 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -167,8 +173,8 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#output-commands" id="output-commands">Output Commands</a></h1>
-<h2><a class="header" href="#cheatsheet" id="cheatsheet">Cheatsheet</a></h2>
+                        <h1 id="output-commands"><a class="header" href="#output-commands">Output Commands</a></h1>
+<h2 id="cheatsheet"><a class="header" href="#cheatsheet">Cheatsheet</a></h2>
 <pre><code class="language-ruby">say 'anything'
 say '!txtred!anything in red'
 say 'only one !txtred!word!txtrst! in red'
@@ -178,12 +184,12 @@ say_status :download, 'Download in progress', :txtblu
 word_wrap '  Indent a potentially wrapping line by two spaces'
 say word_wrap '  Indent a potentially wrapping line by two spaces and say it'
 </code></pre>
-<h2><a class="header" href="#reference" id="reference">Reference</a></h2>
+<h2 id="reference"><a class="header" href="#reference">Reference</a></h2>
 <p>All these commands can be used inside your <code>:action</code> blocks.</p>
 <p>These commands are provided by the 
 <a href="https://github.com/DannyBen/colsole">Colsole gem</a> which is already 
 bundled with Runfile.</p>
-<h3><a class="header" href="#say-string" id="say-string">say <em>string</em></a></h3>
+<h3 id="say-string"><a class="header" href="#say-string">say <em>string</em></a></h3>
 <p>Print a message to screen, with support for color markers and 
 partial strings.</p>
 <p>End the string with a space to force the cursor to stay at the same
@@ -194,7 +200,7 @@ say &quot;!txtgrn!I am green&quot;
 say &quot;Legen... wait for it... &quot;
 say &quot;dary&quot;
 </code></pre>
-<h3><a class="header" href="#resay-string" id="resay-string">resay <em>string</em></a></h3>
+<h3 id="resay-string"><a class="header" href="#resay-string">resay <em>string</em></a></h3>
 <p>Erase the current output line and print a new message. Should be 
 called only after a space terminated call to <code>say</code> to ensure the 
 cursor is at the same line.</p>
@@ -202,13 +208,13 @@ cursor is at the same line.</p>
 <pre><code class="language-ruby">say &quot;Downloading... &quot;
 resay &quot;Downloaded&quot;
 </code></pre>
-<h3><a class="header" href="#say_status-status-message--color" id="say_status-status-message--color">say_status <em>status</em>, <em>message</em> [, <em>color</em>]</a></h3>
+<h3 id="say_status-status-message--color"><a class="header" href="#say_status-status-message--color">say_status <em>status</em>, <em>message</em> [, <em>color</em>]</a></h3>
 <p>Print a message to screen, with a colored status tag.</p>
 <p><strong>Examples:</strong></p>
 <pre><code class="language-ruby">say_status :success, &quot;Task completed&quot;
 say_status :error, &quot;Task failed&quot;, :txtred
 </code></pre>
-<h3><a class="header" href="#word_wrap-string--length" id="word_wrap-string--length">word_wrap <em>string</em> [, <em>length</em>]</a></h3>
+<h3 id="word_wrap-string--length"><a class="header" href="#word_wrap-string--length">word_wrap <em>string</em> [, <em>length</em>]</a></h3>
 <p>If you wish to print a string and make it wrap automatically based
 on the width of the terminal, use <code>word_wrap</code>.</p>
 <p>The function is also sensitive to any leading spaces. These will be
