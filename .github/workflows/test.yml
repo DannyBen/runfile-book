@@ -27,4 +27,4 @@ jobs:
         sleep 3
 
     - name: Run tests
-      run: test/test.sh
+      run: bundle exec test/test.sh
