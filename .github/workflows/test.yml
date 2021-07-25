@@ -12,15 +12,14 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
 
-    - name: Set up Ruby
-      uses: actions/setup-ruby@v1
-      with: { ruby-version: '2.6' }
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with: 
+        ruby-version: '3.0'
+        bundler-cache: true
 
     - name: Install linux dependencies
       run: sudo apt install -y aspell aspell-en
-
-    - name: Install gem dependencies
-      run: gem install sla httpme
 
     - name: Start static site server
       run: |
