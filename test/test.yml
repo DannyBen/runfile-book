@@ -1,3 +1,6 @@
+# Test workflow
+# Cannot be used at the moment, since the target folder needs to be built
+
 name: Test
 on:
   pull_request:
@@ -26,8 +29,5 @@ jobs:
         httpme docs > /dev/null 2>&1 &
         sleep 3
 
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
-
-    # - name: Run tests
-    #   run: bundle exec test/test.sh
+    - name: Run tests
+      run: bundle exec test/test.sh
