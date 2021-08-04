@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://runfile.dannyb.co/sitemap.xml.gz
