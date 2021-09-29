@@ -27,11 +27,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=1.8.2.681822891580" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.9.686211291380" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.8.2.681822891580" defer data-turbo-track="reload"></script>
-    <script type="text/javascript" src="/resources/js/retype.js?v=1.8.2" defer data-turbo-track="reload"></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.8.2.681822891580" defer></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.9.686211291380" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/retype.js?v=1.9" defer data-turbo-track="reload"></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.9.686211291380" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -51,7 +51,7 @@
                         <img class="max-h-10 dark:hidden md:inline-block" src="/assets/logo.svg">
                         <img class="max-h-10 hidden dark:inline-block" src="/assets/logo-dark.svg">
                     </span>
-                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">v0.11.2</span>
+                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">v0.12.0</span>
             </div>
 
             <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
@@ -222,21 +222,28 @@ Runfile created.
 
 $ run
 Usage:
-  run command &lt;arg&gt; [--flag]
+  run hello [&lt;name&gt; --shout]
   run (-h|--help|--version)
 
-$ run command hello
-Command running...
+ $ run hello world -s
+HELLO WORLD
 
 $ cat Runfile
-summary &quot;Application description&quot;
+title   &quot;Greeter&quot;
+summary &quot;A sample Runfile&quot;
 version &quot;0.1.0&quot;
 
-usage  &quot;command &lt;arg&gt; [--flag]&quot;
-help   &quot;Help line for command&quot;
-option &quot;-f --flag&quot;, &quot;Help text for option&quot;
-action :command do |args|
-  say &quot;Command running...&quot;
+usage  &quot;hello [&lt;name&gt; --shout]&quot;
+help   &quot;Say hello&quot;
+option &quot;-s --shout&quot;, &quot;Greet louder&quot;
+action :hello do |args|
+  message = &quot;Hello #{args['&lt;name&gt;']}&quot;
+
+  if args['--shout']
+    puts message.upcase
+  else
+    puts message
+  end
 end</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="using-named-runfiles">
@@ -252,17 +259,17 @@ $ run new greet
 greet.runfile created.
 
 $ run
-Runfile engine v0.7.0
+Runfile engine v0.x.y
 
 Tip: Type 'run new' or 'run new name' to create a runfile.
-For global access, place named.runfiles in ~/runfile/ or in /etc/runfile/ or 
-anywhere in the PATH.
+For global access, place named.runfiles in ~/runfile/ or in /etc/runfile/.
 
-  run greet ........................ /path/to/file
+  run greet .................................................... /vagrant/temp
+
 
 $ run greet
 Usage:
-  run greet command &lt;arg&gt; [--flag]
+  run greet hello [&lt;name&gt; --shout]
   run greet (-h|--help|--version)
 
 $ cd ~/runfile    # or /etc/runfile
@@ -271,7 +278,7 @@ $ run new hotdog
 hotdog.runfile created.
 
 $ run
-Runfile engine v0.4.0
+Runfile engine v0.x.y
 
 Tip: Type 'run new' or 'run new name' to create a runfile.
 For global access, place named.runfiles in ~/runfile/ or in /etc/runfile/ or 

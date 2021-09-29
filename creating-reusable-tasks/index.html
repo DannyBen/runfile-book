@@ -27,11 +27,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/resources/css/retype.css?v=1.8.2.681822891580" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.9.686211291380" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.8.2.681822891580" defer data-turbo-track="reload"></script>
-    <script type="text/javascript" src="/resources/js/retype.js?v=1.8.2" defer data-turbo-track="reload"></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.8.2.681822891580" defer></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.9.686211291380" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/retype.js?v=1.9" defer data-turbo-track="reload"></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.9.686211291380" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -51,7 +51,7 @@
                         <img class="max-h-10 dark:hidden md:inline-block" src="/assets/logo.svg">
                         <img class="max-h-10 hidden dark:inline-block" src="/assets/logo-dark.svg">
                     </span>
-                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">v0.11.2</span>
+                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">v0.12.0</span>
             </div>
 
             <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
@@ -214,15 +214,15 @@ module MyCommonTasks
     usage  &quot;cake [--chocolate|--cheese]&quot;
     help   &quot;Make some cake&quot;
     action :cake do |args|
-      say &quot;Making a cake...&quot;
-      say &quot;... a chocolate cake&quot; if args['--chocolate']
-      say &quot;... a cheese cake&quot; if args['--cheese']
+      puts &quot;Making a cake...&quot;
+      puts &quot;... a chocolate cake&quot; if args['--chocolate']
+      puts &quot;... a cheese cake&quot; if args['--cheese']
     end
 
     usage  &quot;faces&quot;
     help   &quot;Make faces&quot;
     action :faces do |args|
-      say &quot;Making faces&quot;
+      puts &quot;Making faces&quot;
     end
 
     endcommand
@@ -249,14 +249,16 @@ version &quot;0.1.0&quot;
 MyCommonTasks.tasks
 
 # continue with regular tasks
-usage  &quot;hello [&lt;name&gt; --color]&quot;
+usage  &quot;hello [&lt;name&gt; --shout]&quot;
 help   &quot;Say hello&quot;
-option &quot;-c --color&quot;, &quot;Greet with color&quot;
+option &quot;-s --shout&quot;, &quot;Greet louder&quot;
 action :hello do |args|
-  if args['--color']
-    say &quot;!txtgrn!Hello #{args['&lt;name&gt;']}&quot;
+  message = &quot;Hello #{args['&lt;name&gt;']}&quot;
+  
+  if args['--shout']
+    puts message.upcase
   else
-    say &quot;Hello #{args['&lt;name&gt;']}&quot;
+    puts message
   end
 end</code></pre>
 </doc-codeblock></div>
