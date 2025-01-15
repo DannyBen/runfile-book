@@ -1,3 +1,10 @@
-name = "my-project"
+name = "runfile.dannyb.co"
 type = "javascript"
 compatibility_date = "2025-01-15"
+
+[build]
+command = "npm install retypeapp && npx retype build"
+
+[build.environment]
+NODE_VERSION = "18"
+pages_build_output_dir = "./docs"
