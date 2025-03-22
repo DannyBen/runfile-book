@@ -1,6 +1,8 @@
 ---
 label: Overview
 icon: home
+meta:
+  title: Runfile - Command line for your projects
 ---
 
 # Welcome to Runfile
